@@ -2,7 +2,7 @@
 // ========== MOVIE OBJECTS ==========
 
 // Movie 1: Barbie
-const barbieMovie = {
+const BarbieMovie = {
   id: 1,
   title: "Barbie",
   year: 2023,
@@ -16,10 +16,10 @@ const barbieMovie = {
     "Barbie and Ken embark on a journey of self-discovery after leaving the utopian Barbie Land for the real world.",
 };
 
-console.log("Barbie movie object:", barbieMovie);
+console.log("Barbie movie object:", BarbieMovie);
 
 // Movie 2: Dune
-const duneMovie = {
+const DuneMovie = {
   id: 2,
   title: "Dune",
   year: 2021,
@@ -33,10 +33,10 @@ const duneMovie = {
     "Paul Atreides leads nomadic tribes in a battle to control the desert planet Arrakis and its valuable spice.",
 };
 
-console.log("Dune movie object:", duneMovie);
+console.log("Dune movie object:", DuneMovie);
 
 // Movie 3: Dune: Part Two
-const duneTwoMovie = {
+const DuneTwoMovie = {
   id: 3,
   title: "Dune: Part Two",
   year: 2024,
@@ -50,9 +50,9 @@ const duneTwoMovie = {
     "Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.",
 };
 
-console.log("Dune: Part Two movie object:", duneTwoMovie);
+console.log("Dune: Part Two movie object:", DuneTwoMovie);
 
-const EverythingEverywhereAllatOnce = {
+const EverythingEverywhereAllatOnceMovie = {
   id: 4, // Unikt nummer for filmen
   title: "Everything Everywhere All at Once",
   year: 2022, // Number, ikke string!
@@ -68,10 +68,10 @@ const EverythingEverywhereAllatOnce = {
 
 console.log(
   "Everything Everywhere All at Once movie object:",
-  EverythingEverywhereAllatOnce
+  EverythingEverywhereAllatOnceMovie
 );
 
-const FightClub = {
+const FightClubMovie = {
   id: 5, // Unikt nummer for filmen
   title: "Fight Club",
   year: 1999, // Number, ikke string!
@@ -84,9 +84,9 @@ const FightClub = {
     "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.", // Kort beskrivelse af filmen
 };
 
-console.log("Fight Club movie object:", FightClub);
+console.log("Fight Club movie object:", FightClubMovie);
 
-const ForrestGump = {
+const ForrestGumpMovie = {
   id: 6, // Unikt nummer for filmen
   title: "Forrest Gump",
   year: 1999, // Number, ikke string!
@@ -100,9 +100,9 @@ const ForrestGump = {
     "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.", // Kort beskrivelse af filmen
 };
 
-console.log("Forrest Gump movie object:", ForrestGump);
+console.log("Forrest Gump movie object:", ForrestGumpMovie);
 
-const Goodfellas = {
+const GoodfellasMovie = {
   id: 7, // Unikt nummer for filmen
   title: "Goodfellas",
   year: 1990, // Number, ikke string!
@@ -115,9 +115,9 @@ const Goodfellas = {
     "The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito.", // Kort beskrivelse af filmen
 };
 
-console.log("Goodfellas movie object:", Goodfellas);
+console.log("Goodfellas movie object:", GoodfellasMovie);
 
-const Inception = {
+const InceptionMovie = {
   id: 7, // Unikt nummer for filmen
   title: "Inception",
   year: 2010, // Number, ikke string!
@@ -131,4 +131,36 @@ const Inception = {
     "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.", // Kort beskrivelse af filmen
 };
 
-console.log("Inception movie object:", Inception);
+console.log("Inception movie object:", InceptionMovie);
+
+// Test hvordan du får adgang til movie data
+console.log("=== TESTING MOVIE OBJECTS ===");
+
+console.log("Barbie title:", BarbieMovie.title);
+console.log("Dune year:", DuneMovie.year);
+console.log("Fight Club rating:", FightClubMovie.rating);
+console.log("Inception director:", InceptionMovie.director);
+
+// Opret beskeder med movie data
+console.log(
+  `${BarbieMovie.title} (${BarbieMovie.year}) - Rating: ⭐ ${BarbieMovie.rating}`
+);
+console.log(`${DuneMovie.title} er instrueret af ${DuneMovie.director}`);
+console.log(
+  `${FightClubMovie.title} er fra ${FightClubMovie.year} og har rating ${FightClubMovie.rating}`
+);
+
+// Du kan nu programmatisk arbejde med data:
+
+// Ændre rating
+BarbieMovie.rating = 7.5;
+console.log("Updated Barbie rating:", BarbieMovie.rating);
+
+// Tilføje ny property
+BarbieMovie.watched = true;
+console.log("Barbie movie with watched status:", BarbieMovie);
+
+// Beregne movie alder
+const currentYear = new Date().getFullYear();
+const barbieAge = currentYear - BarbieMovie.year;
+console.log(`${BarbieMovie.title} er ${barbieAge} år gammel`);
